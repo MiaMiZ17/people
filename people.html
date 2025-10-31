@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧱 $PEOPLE - People With... Brick Wall Hype 🚀😂</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Bangers', cursive, Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+            to { box-shadow: 0 2px 20px rgba(0, 255, 136, 0.5); }
+        }
+        .teaser {
+            font-size: 4em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 
+                -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
+                4px 4px 8px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(0, 255, 136, 1);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .reveal {
+            font-size: 1.5em;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+            margin-top: 10px;
+        }
+        .reveal.show {
+            opacity: 1;
+        }
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 
+                -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+                2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 3em;
+            margin: 10px 0;
+            color: #00ff88;
+        }
+        .meme-container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 136, 0.5);
+            animation: bounce 1s infinite alternate;
+            color: #ffffff;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+        .youtube-embed {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            background: #000;
+            margin-bottom: 10px;
+        }
+        .youtube-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .meme-container p {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            font-size: 1.2em;
+        }
+        .token-info {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: left;
+            border: 2px dashed #00ff88;
+            color: #ffffff;
+        }
+        .token-info p {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .stats-table th, .stats-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+            color: #ffffff;
+        }
+        .stats-table th {
+            font-weight: bold;
+            color: #00ff88;
+        }
+        .loading {
+            color: #00ff88;
+            font-style: italic;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .cta {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Bangers', cursive;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+        .buy-btn {
+            background: linear-gradient(45deg, #00ff88, #00cc66);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
+        }
+        .sell-btn {
+            background: linear-gradient(45deg, #ff4444, #cc0000);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+        }
+        .meme-btn {
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+        }
+        .cta:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            font-family: 'Bangers', cursive;
+            text-transform: uppercase;
+        }
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(360deg);
+        }
+        .meme-quotes {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+        .meme-quotes h3 {
+            color: #00ff88;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        .meme-quotes p {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.8em;
+            opacity: 0.7;
+            color: #ffffff;
+            width: 100%;
+        }
+        header p, header code {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        .section {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="teaser">PEOPLE WITH… <span class="reveal" id="reveal1">VISION?</span></h1>
+        <p>🧱 $PEOPLE BRICK WALL HYPE 🧱 | Solana's Stubborn Community Token</p>
+        <p>Token Address: <code>DyRAaLJMT7MbJE3HVxjTsUo186yDgwGkSWpiTmdzpump</code> 🪨</p>
+    </header>
+    <div class="section">
+        <div class="meme-container">
+            <h2 id="meme">PEOPLE WITH… UNRESPONSIVE BRICKS? 🧱😂</h2>
+            <div class="youtube-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NVuL7mLqT6g?si=Jh6bWoPBe42qrqMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>"Yo $PEOPLE fam, this wall ain't ready for the pump! Who's HODLing? #MemeCoinMadness 🧱😂🚀"</p>
+        </div>
+        <div class="tenor-gif-embed" data-postid="18667615" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/guy-arguing-guy-talking-to-wall-talking-brick-wall-gif-18667615">Guy Arguing GIF</a>from <a href="https://tenor.com/search/guy-gifs">Guy GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+    
+    <div class="cta-buttons">
+        <a href="https://trade.padre.gg/trade/solana/DyRAaLJMT7MbJE3HVxjTsUo186yDgwGkSWpiTmdzpump" class="cta sell-btn" target="_blank">Trade on DEX 🔄📊</a>
+        <a href="https://jup.ag/tokens/DyRAaLJMT7MbJE3HVxjTsUo186yDgwGkSWpiTmdzpump" class="cta buy-btn" target="_blank">Buy $PEOPLE Now! 💰🤑</a>
+        <a href="https://x.com/intent/tweet?text=People With… $PEOPLE gains! Just talked to the brick wall – it's about to pump! 🧱🚀 %23MemeCoinMadness&url=https://peoplewith.fun" class="cta meme-btn" target="_blank">Share Meme! 📣😂</a>
+    </div>
+    
+    <div class="social-links">
+        <a href="https://x.com/MaronzioVance" target="_blank">🐦 Vance Twitter</a>
+        <a href="https://x.com/i/communities/1984218907687719206" target="_blank">📱 $PEOPLE X COM</a>
+        <a href="https://www.youtube.com/watch?v=NVuL7mLqT6g" target="_blank">🎥 OG Meme Vid</a>
+    </div>
+    
+    <div class="section">
+        <div class="meme-quotes">
+            <h3 id="quotes">🔥 MEME QUOTES: PEOPLE WITH… 🔥</h3>
+            <p>"People With… Vision: HODL Till It Cracks! 💎🧱" – Wall Whisperer</p>
+            <p>"$PEOPLE Holders: People With… Walls Since 2025 😂" – Community Chad</p>
+            <p>"When Fiat Sleeps, People With… Moon Bricks! 🌕🚀" – Meme Lord</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="token-info">
+            <h2 id="stats">📊 TOKEN STATS (LIVE - PUMPIN' OR DUMPIN'?) 📊</h2>
+            <table class="stats-table" id="statsTable">
+                <tr><th>Name</th><td id="name">People 🧑‍🤝‍🧑</td></tr>
+                <tr><th>Symbol</th><td id="symbol">$PEOPLE 💎</td></tr>
+                <tr><th>Price</th><td id="price" class="loading">Loading... 🔥</td></tr>
+                <tr><th>Market Cap</th><td id="mc" class="loading">Loading... (To the MOON? 🌕)</td></tr>
+                <tr><th>Liquidity</th><td id="liquidity" class="loading">Loading... 💦</td></tr>
+                <tr><th>24h Volume</th><td id="volume" class="loading">Loading... 📈</td></tr>
+                <tr><th>Total Supply</th><td id="supply">116,084,731 🤑</td></tr>
+                <tr><th>Holders</th><td id="holders">500+ (And counting... 👥)</td></tr>
+            </table>
+            <p style="margin-top: 10px; font-style: italic;">Meme-powered community token on Solana. People With… Hype – talk to the wall, watch it PUMP! 🧱🚀💥 No rugs, just vibes. DYOR tho! 🤫</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Powered by Tetsuo.ai & Grok | Made with ❤️😂 for the People With… Vibes | Oct 31, 2025 🕷️ (Spooky Pumps Incoming?)</p>
+    </footer>
+    
+    <script>
+        // Teaser reveal on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveal = document.getElementById('reveal1');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    reveal.classList.add('show');
+                }
+            });
+        });
+        
+        // Live stats fetch from DexScreener API (public, no key needed)
+        async function fetchLiveStats() {
+            const tokenAddress = 'DyRAaLJMT7MbJE3HVxjTsUo186yDgwGkSWpiTmdzpump';
+            try {
+                const response = await fetch(`https://api.dexscreener.com/token-pairs/v1/solana/${tokenAddress}`);
+                if (!response.ok) throw new Error('API response not ok');
+                const data = await response.json();
+                const pair = data.pairs?.[0];
+                if (pair) {
+                    const price = pair.priceUsd || 0;
+                    const mc = pair.marketCap || 0;
+                    const liq = pair.liquidity?.usd || 0;
+                    const vol = pair.volume?.h24 || 0;
+                    const change = pair.priceChange?.h24 || 0;
+                    
+                    document.getElementById('price').textContent = `$${parseFloat(price).toFixed(7)} ${change > 0 ? '🔥' : '❄️'}`;
+                    document.getElementById('mc').textContent = `$${Math.round(mc).toLocaleString()} (To the MOON? 🌕)`;
+                    document.getElementById('liquidity').textContent = `$${Math.round(liq).toLocaleString()}+ 💦`;
+                    document.getElementById('volume').textContent = `$${Math.round(vol).toLocaleString()}+ 📈`;
+                }
+                // Remove loading class
+                document.querySelectorAll('.loading').forEach(el => el.classList.remove('loading'));
+            } catch (error) {
+                console.error('Failed to fetch stats:', error);
+                // Fallback to static
+                document.getElementById('price').textContent = '$0.0002870 (Check DexScreener) 🔥';
+                document.getElementById('mc').textContent = '$287K (To the MOON? 🌕)';
+                document.getElementById('liquidity').textContent = '$67K+ 💦';
+                document.getElementById('volume').textContent = '$2.4M+ 📈';
+                document.querySelectorAll('.loading').forEach(el => el.classList.remove('loading'));
+            }
+        }
+        
+        // Call on load
+        fetchLiveStats();
+        // Refresh every 30s
+        setInterval(fetchLiveStats, 30000);
+        
+        // Enhanced meme animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Floating bricks
+            const bricks = document.createElement('div');
+            bricks.innerHTML = '🧱🧱🧱🚀';
+            bricks.style.position = 'fixed';
+            bricks.style.top = '10px';
+            bricks.style.right = '10px';
+            bricks.style.fontSize = '2em';
+            bricks.style.animation = 'float 3s ease-in-out infinite';
+            bricks.style.zIndex = '1000';
+            document.body.appendChild(bricks);
+            
+            // Random emoji rain
+            function createEmoji() {
+                const emoji = ['🚀', '🧱', '😂', '💎', '🌕', '🤑'];
+                const el = document.createElement('div');
+                el.innerHTML = emoji[Math.floor(Math.random() * emoji.length)];
+                el.style.position = 'fixed';
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.top = '-10px';
+                el.style.fontSize = '1.5em';
+                el.style.pointerEvents = 'none';
+                el.style.animation = 'rain 5s linear forwards';
+                el.style.color = '#ffffff';
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 5000);
+            }
+            setInterval(createEmoji, 2000);
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0%, 100% { transform: translateY(0px) rotate(0deg); }
+                    50% { transform: translateY(-10px) rotate(5deg); }
+                }
+                @keyframes rain {
+                    to {
+                        transform: translateY(100vh) rotate(360deg);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
