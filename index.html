@@ -109,6 +109,64 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
             font-size: 1.2em;
         }
+        .lore-container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 165, 0, 0.5);
+            animation: bounce 1s infinite alternate;
+            color: #ffffff;
+            text-align: left;
+        }
+        .lore-container p {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            font-size: 1.1em;
+        }
+        .lore-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .lore-table th, .lore-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+            color: #ffffff;
+        }
+        .lore-table th {
+            font-weight: bold;
+            color: #ffaa00;
+        }
+        .twitter-tweet {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 100%;
+        }
+        .x-video-embed {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            background: #000;
+            margin: 10px 0;
+        }
+        .x-video-embed video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         .token-info {
             max-width: 800px;
             margin: 20px;
@@ -168,11 +226,6 @@
             background: linear-gradient(45deg, #00ff88, #00cc66);
             color: #000;
             box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
-        }
-        .sell-btn {
-            background: linear-gradient(45deg, #ff4444, #cc0000);
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
         }
         .meme-btn {
             background: linear-gradient(45deg, #ff69b4, #ff1493);
@@ -284,6 +337,59 @@
     </div>
     
     <div class="section">
+        <div class="lore-container">
+            <h2 id="lore">🧱 THE LORE: SOCIAL ENGINEERING SCAM EXPOSED 💥</h2>
+            <p>@MaronzioVance, a Twitter user with over 7,000 followers known for his humorous, relatable persona (bio: "Somewhere talking to a brick wall"), became the face of a memecoin launch on Pump.fun around late October 2025. The coin, seemingly themed around his "People" or "Maronzio" branding (as seen in trade screenshots showing massive ROIs like +558% on quick flips), appeared to be a community-driven project. However, it was a sophisticated scam orchestrated by @Felixonchain (Felix), a self-proclaimed developer and crypto influencer. This involved classic social engineering tactics: building trust, providing "helpful" tools, and isolating the victim during execution. Below, I'll break it down step by step, based on public X posts, wallet traces, and livestream admissions.</p>
+            
+            <h3>Step 1: Building Trust and Offering "Help"</h3>
+            <p>Felix approached MaronzioVance privately, positioning himself as a knowledgeable dev/KOL (key opinion leader) experienced in Solana memecoin launches on Pump.fun. Pump.fun is a popular platform for quick, low-barrier token creations, where creators earn ~0.5-1% fees on all buys/sells during the bonding curve phase (before hitting Raydium DEX).</p>
+            <p>To "assist" with the launch, Felix provided MaronzioVance with a pre-configured private key for the Pump.fun creator profile/wallet. This key linked the coin's fees directly to a wallet Felix controlled. MaronzioVance, likely inexperienced in crypto tech, trusted this as a shortcut—common in the fast-paced memecoin space where "devs" offer turnkey solutions.</p>
+            <p>MaronzioVance was positioned as the "CTO" (community takeover) figurehead: the public face to hype the coin via livestreams, drawing in his followers for authenticity. He wasn't the actual coder; Felix handled the backend, making MaronzioVance look like the lead without technical involvement.</p>
+            <p>This mirrors broader Pump.fun scams where "devs" leak or hijack keys via GitHub repos or shared tools, but here it was direct social engineering—no code leaks, just misplaced trust.</p>
+            
+            <h3>Step 2: The Livestream Setup and Isolation</h3>
+            <p>MaronzioVance announced and went live on Pump.fun (e.g., posts like "I’m thinking of going live on pump fun. I have so many questions" on Oct 31, 2025), streaming to promote the coin. Livestreams on Pump.fun boost visibility, as trades generate real-time fees for the creator—turning hype into direct profit.</p>
+            <p>During the stream, the coin pumped hard (e.g., from $9K market cap), fueled by snipes and community buys. The provided screenshot shows a classic snipe: buying low (5.95 SOL at $39.4M cap? Wait, likely a display error for early bonding curve) and selling high for +33 SOL ($6K) profit in 9 hours. This was one of Felix's side wallets exploiting the pump.</p>
+            <p>Felix controlled the livestream chat, banning users who tried to warn MaronzioVance about the scam (e.g., "Don't give your private key!" or "Fees are being drained!"). This isolated MaronzioVance, preventing real-time alerts. Community members later reported failed DMs to MaronzioVance, blocked by Felix's influence.</p>
+            <p>MaronzioVance admitted on-stream he had "no idea how much money was involved" in fees, confirming he lacked wallet access or understanding.</p>
+            
+            <h3>Step 3: Draining the Fees and Covering Tracks</h3>
+            <p>As trades surged, Pump.fun funneled ~1 SOL per $2K in volume to the creator wallet (Felix's). He claimed fees in batches: early big transfers (e.g., 27 SOL to his Kraken wallet for "untraceability"), then smaller ones (0.1-2 SOL) to side wallets.</p>
+            <p>Felix also sniped the coin early with multiple alt accounts, netting 100+ SOL (~$20K+) before farming fees post-pump. Total haul: Likely 50-100+ SOL, per wallet traces shared publicly.</p>
+            <p>Post-exposure (via threads like @justyogurt_'s breakdown), Felix went quiet but continued small drains. Even after MaronzioVance's relaunch attempts (e.g., Nov 2 posts: "I’m going to fix this. Community"), the original wallet address remained tied to Felix, allowing ongoing theft unless Pump.fun support intervenes.</p>
+            
+            <h3>Why This Worked: Social Engineering Breakdown</h3>
+            <table class="lore-table">
+                <tr><th>Tactic</th><th>How It Was Used</th><th>Why Effective</th></tr>
+                <tr><td>Authority/Expertise</td><td>Felix posed as a "pro dev" offering free launch help.</td><td>Newbies like MaronzioVance (non-technical) defer to "experts" in high-pressure crypto.</td></tr>
+                <tr><td>Reciprocity</td><td>Free private key + setup in exchange for MaronzioVance's promo.</td><td>Creates obligation; victims feel they "owe" the helper.</td></tr>
+                <tr><td>Isolation</td><td>Chat bans + DM blocks during live.</td><td>Prevents external validation; echo chamber reinforces trust.</td></tr>
+                <tr><td>Urgency/Scarcity</td><td>"Quick launch before trend dies!"</td><td>Memecoins move fast; delays feel like missed gains.</td></tr>
+                <tr><td>Obfuscation</td><td>Fees auto-claim to hidden wallet; no immediate red flags.</td><td>Victim sees hype/success, not backend theft.</td></tr>
+            </table>
+            
+            <h3>Aftermath and Lessons</h3>
+            <p>MaronzioVance, realizing the betrayal, tried CTO/relauches (e.g., Nov 3: "I’m live on pump fun" with confused posts about Binance memes featuring him). Community urged Pump.fun support takeover, but Felix's wallet lingers.</p>
+            <p>Broader impact: Followers lost thousands (one reported their "monthly salary"); eroded trust in Pump.fun lives.</p>
+            <p>Protect Yourself: Never use provided private keys—generate your own via Phantom/Solflare. Verify wallets pre-launch. Stream questions live, ignore DM "help." Tools like RugCheck.xyz flag suspicious devs.</p>
+            
+            <h3>Key Tweet from the Drama:</h3>
+            <blockquote class="twitter-tweet" data-dnt="true">
+                <p lang="en" dir="ltr">If CCM is real @a1lon9 than OG meme maker is going to livestream - @pumpdotfun intern post the news article that @MaronzioVance is a creator trying to capitalize on his meme <br><br>DyRAaLJMT7MbJE3HVxjTsUo186yDgwGkSWpiTmdzpump</p>&mdash; 👳🏽‍♂️Akhi (@MiaMi_Z17) <a href="https://x.com/MiaMi_Z17/status/1984358355595640878">October 31, 2025</a>
+            </blockquote>
+            <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+            
+            <h4>Direct Video Embed (Crucial Footage from OG Meme Maker):</h4>
+            <div class="x-video-embed">
+                <video controls>
+                    <source src="https://video.twimg.com/amplify_video/1984358263916277760/vid/avc1/496x270/LjXSLHDuqo2FwSkT.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
         <div class="meme-quotes">
             <h3 id="quotes">🔥 MEME QUOTES: PEOPLE WITH… 🔥</h3>
             <p>"People With… Vision: HODL Till It Cracks! 💎🧱" – Wall Whisperer</p>
@@ -309,7 +415,7 @@
     </div>
     
     <footer>
-        <p>Powered by Tetsuo.ai & Grok | Made with ❤️😂 for the People With… Vibes | Oct 31, 2025 🕷️ (Spooky Pumps Incoming?)</p>
+        <p>Powered by Tetsuo.ai & Grok | Made with ❤️😂 for the People With… Vibes | Nov 3, 2025 🕷️ (Spooky Pumps Incoming?)</p>
     </footer>
     
     <script>
@@ -347,11 +453,11 @@
                 document.querySelectorAll('.loading').forEach(el => el.classList.remove('loading'));
             } catch (error) {
                 console.error('Failed to fetch stats:', error);
-                // Fallback to static
-                document.getElementById('price').textContent = '$0.0002870 (Check DexScreener) 🔥';
-                document.getElementById('mc').textContent = '$287K (To the MOON? 🌕)';
-                document.getElementById('liquidity').textContent = '$67K+ 💦';
-                document.getElementById('volume').textContent = '$2.4M+ 📈';
+                // Fallback to static (updated Nov 3, 2025)
+                document.getElementById('price').textContent = '$0.0000314 (Check DexScreener) 🔥';
+                document.getElementById('mc').textContent = '$31K (To the MOON? 🌕)';
+                document.getElementById('liquidity').textContent = '$21K+ 💦';
+                document.getElementById('volume').textContent = '$65K+ 📈';
                 document.querySelectorAll('.loading').forEach(el => el.classList.remove('loading'));
             }
         }
