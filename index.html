@@ -23,6 +23,7 @@
             text-align: center;
             overflow-x: hidden;
             padding-top: 20px;
+            box-sizing: border-box;
         }
         header {
             background: rgba(0, 0, 0, 0.5);
@@ -81,6 +82,7 @@
             border: 2px solid rgba(0, 255, 136, 0.5);
             animation: bounce 1s infinite alternate;
             color: #ffffff;
+            box-sizing: border-box;
         }
         @keyframes bounce {
             from { transform: translateY(0); }
@@ -120,11 +122,17 @@
             animation: bounce 1s infinite alternate;
             color: #ffffff;
             text-align: left;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         .lore-container p {
             color: #ffffff;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
             font-size: 1.1em;
+            margin: 0 0 1em 0;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
         .lore-table {
             width: 100%;
@@ -178,6 +186,9 @@
             text-align: left;
             border: 2px dashed #00ff88;
             color: #ffffff;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         .token-info p {
             color: #ffffff;
@@ -282,6 +293,7 @@
             font-style: italic;
             font-size: 1.1em;
             color: #ffffff;
+            box-sizing: border-box;
         }
         .meme-quotes h3 {
             color: #00ff88;
@@ -309,7 +321,7 @@
         /* Mobile Responsiveness Fixes */
         @media (max-width: 768px) {
             body {
-                padding: 10px;
+                padding: 0;
                 padding-top: 20px;
             }
             .teaser {
@@ -317,47 +329,70 @@
                 letter-spacing: 2px;
             }
             .meme-container, .lore-container, .token-info, .meme-quotes {
-                margin: 10px;
+                margin: 10px 10px;
                 padding: 15px;
-                max-width: calc(100% - 20px);
+                max-width: none;
+                width: calc(100vw - 20px);
                 overflow-wrap: break-word;
                 word-break: break-word;
+                box-sizing: border-box;
             }
             .lore-container {
                 text-align: left;
-                padding-left: 20px;
+                padding: 15px;
+                margin: 10px;
+                width: calc(100vw - 20px);
+            }
+            .lore-container p {
+                hyphens: auto;
+                -webkit-hyphens: auto;
+                margin: 0 0 1em 0;
             }
             .twitter-tweet {
-                max-width: 100%;
+                max-width: calc(100vw - 20px);
                 margin: 10px auto;
                 padding: 15px;
+                box-sizing: border-box;
             }
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;
             }
             .cta {
                 width: 100%;
                 max-width: 300px;
                 text-align: center;
+                box-sizing: border-box;
             }
             .social-links {
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;
             }
             .social-links a {
                 width: 100%;
                 max-width: 300px;
                 text-align: center;
+                box-sizing: border-box;
             }
             .youtube-embed {
                 padding-bottom: 75%; /* Adjust aspect ratio for mobile */
             }
             .lore-table {
                 font-size: 0.9em;
+                overflow-x: auto;
+                display: block;
             }
             .lore-table th, .lore-table td {
                 padding: 8px 5px;
+                min-width: 100px;
+            }
+            header {
+                padding: 15px;
+            }
+            header p, header code {
+                word-break: break-all;
             }
         }
     </style>
