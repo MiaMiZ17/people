@@ -306,6 +306,60 @@
         .section {
             scroll-margin-top: 100px;
         }
+        /* Mobile Responsiveness Fixes */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                padding-top: 20px;
+            }
+            .teaser {
+                font-size: 2.5em;
+                letter-spacing: 2px;
+            }
+            .meme-container, .lore-container, .token-info, .meme-quotes {
+                margin: 10px;
+                padding: 15px;
+                max-width: calc(100% - 20px);
+                overflow-wrap: break-word;
+                word-break: break-word;
+            }
+            .lore-container {
+                text-align: left;
+                padding-left: 20px;
+            }
+            .twitter-tweet {
+                max-width: 100%;
+                margin: 10px auto;
+                padding: 15px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .cta {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .social-links a {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            .youtube-embed {
+                padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+            }
+            .lore-table {
+                font-size: 0.9em;
+            }
+            .lore-table th, .lore-table td {
+                padding: 8px 5px;
+            }
+        }
     </style>
 </head>
 <body>
